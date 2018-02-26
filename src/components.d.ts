@@ -106,4 +106,34 @@ declare global {
   }
 }
 
+
+import {
+  MyFlash as MyFlash
+} from './components/my-flash/my-flash';
+
+declare global {
+  interface HTMLMyFlashElement extends MyFlash, HTMLStencilElement {
+  }
+  var HTMLMyFlashElement: {
+    prototype: HTMLMyFlashElement;
+    new (): HTMLMyFlashElement;
+  };
+  interface HTMLElementTagNameMap {
+    "my-flash": HTMLMyFlashElement;
+  }
+  interface ElementTagNameMap {
+    "my-flash": HTMLMyFlashElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "my-flash": JSXElements.MyFlashAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MyFlashAttributes extends HTMLAttributes {
+      
+    }
+  }
+}
+
 declare global { namespace JSX { interface StencilJSX {} } }

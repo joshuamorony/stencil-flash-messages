@@ -10,6 +10,9 @@ export class MyApp {
   render() {
     return (
       <div>
+
+        <my-flash></my-flash>
+
         <header>
           <h1>Stencil App Starter</h1>
         </header>
